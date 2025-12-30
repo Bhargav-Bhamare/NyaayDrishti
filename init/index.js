@@ -4,7 +4,7 @@ const sampleCases = require("./caseData.js");
 
 async function initializeDatabase() {
   try {
-    await mongoose.connect("mongodb://localhost:22122/NyaayDrishti");
+    await mongoose.connect("mongodb://localhost:27017/NyaayDrishti");
     console.log("Connected to MongoDB");
 
     // Check if cases already exist
