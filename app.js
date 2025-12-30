@@ -31,7 +31,7 @@ main()
 
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/NyaayDrishti");
+  await mongoose.connect("mongodb://localhost:27017/NyaayDrishti-AppKiAdalat");
 };
 
 //Session Configuration
@@ -82,6 +82,6 @@ app.get("/cMasterDashboard",(req,res) =>{
     res.render("cMaster/cMasterDash.ejs");
 });
 
-app.listen(8080,()=>{
+app.listen(3000,()=>{
     console.log("Listening to port Successfully!");
 });
