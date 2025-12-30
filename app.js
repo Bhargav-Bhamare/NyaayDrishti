@@ -31,7 +31,7 @@ main()
 
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/NyaayDrishti-AppKiAdalat");
+  await mongoose.connect("mongodb://localhost:27017/NyaayDrishti");
 };
 
 //Session Configuration
@@ -75,13 +75,21 @@ app.get("/lawyerDashboard",(req,res) =>{
 });
 
 app.get("/judgeDashboard",(req,res) =>{
-    res.render("judge/judgeDash.ejs");
+    res.render("judge/judgeDashs.ejs");
 });
 
 app.get("/cMasterDashboard",(req,res) =>{
     res.render("cMaster/cMasterDash.ejs");
 });
 
-app.listen(3000,()=>{
+app.get("/judgeLogin",(req,res) =>{
+    res.render("auth/judgeLogin.ejs");
+});
+
+app.get("/cMasterLogin",(req,res) =>{
+    res.render("auth/cMasterLogin.ejs");
+});
+
+app.listen(8080,()=>{
     console.log("Listening to port Successfully!");
 });
